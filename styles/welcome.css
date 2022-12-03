@@ -1,0 +1,42 @@
+#welcome {
+  display: flex;
+  padding: 3rem;
+}
+
+.rectangle {
+  background-color: #f8cc8a;
+}
+.descwel {
+  display: flex;
+  flex-direction: column;
+
+  margin: 1rem;
+}
+.descwel > div {
+  width: 50%;
+  height: 3%;
+}
+
+.descwel > h1 {
+  font-size: calc(0.5rem + 3vw);
+  white-space: nowrap;
+}
+.descwel > .ddi {
+  font-size: calc(0.5rem + 1vw);
+}
+
+.descwel > p {
+  font-size: calc(0.1rem + 1vw);
+}
+
+@media screen and (max-width: 1080px) {
+  #welcome {
+    display: grid;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    margin: 0 auto;
+    /* flex-direction: column;
+    align-items: center; */
+  }
+}
