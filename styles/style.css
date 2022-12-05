@@ -2,6 +2,7 @@
 @import "navbar.css";
 @import "home.css";
 @import "welcome.css";
+@import "footer.css";
 * {
   padding: 0;
   margin: 0;
@@ -20,10 +21,10 @@
 .h100 {
   height: 100vh;
 }
-
+/* 
 #carakerja {
   overflow: hidden;
-}
+} */
 .titlecaker {
   display: flex;
   flex-direction: column;
@@ -59,12 +60,13 @@
   border-radius: 8px;
   padding: 0.5rem 0.5rem;
   align-self: flex-start;
+  font-size: 1vw;
 }
 
 .gridcaker > div > .mulai {
   font-family: "DM Sans", sans-serif;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: calc(0.7rem + 1vw);
   padding-top: 2rem;
 }
 
@@ -72,13 +74,25 @@
   padding-top: 0.5rem;
   font-family: "DM Sans", sans-serif;
   font-weight: 500;
-  font-size: medium;
+  font-size: small;
 }
 
 #paket {
   display: grid;
   padding: 0 20%;
   overflow: hidden;
+  text-align: center;
+}
+
+.griditem {
+  gap: 1rem;
+}
+
+.beli {
+  background-color: black;
+  color: #e2ba06;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
 }
 #paket > h1 {
   margin: 0 auto;
@@ -89,8 +103,14 @@
   border: solid rgba(0, 0, 0, 0.1);
 }
 
+#paket ul {
+  text-align: start;
+}
+
 #paket ul li {
   padding: 0;
+  font-size: small;
+  list-style-type: circle;
 }
 
 .promo1 {
@@ -175,58 +195,30 @@ input[type="submit"]:hover {
   font-size: 1rem;
 }
 
-#footer {
-  background-color: black;
-  color: white;
-  display: grid;
-  grid-auto-flow: column;
-  padding: 4.5rem 2rem;
+@media screen and (max-width: 940px) {
+  #welcome {
+    display: grid;
+    /* box-sizing: border-box; */
+    /* flex-direction: column;
+    align-items: center; */
+  }
+
+  .imgwel > img {
+    aspect-ratio: 654/349;
+    width: 100%;
+  }
 }
 
-#footer > * {
-  margin: 0 auto;
-}
+@media screen and (max-width: 940px) {
+  .gridcaker {
+    display: grid;
+    grid-template-columns: initial;
+    gap: 2rem 4rem;
+    margin: 2rem;
+  }
 
-#footer a {
-  color: white;
-}
-
-.footergrid1 {
-  display: grid;
-}
-
-.middlefoot {
-  display: grid;
-
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-flow: column;
-}
-
-.footergrid2 {
-  display: grid;
-}
-
-.footergrid2 > p {
-  display: grid;
-  font-weight: 500;
-  padding-bottom: 0.5rem;
-}
-
-.footergrid2 > a {
-  padding: 0.8rem 0;
-  font-size: small;
-}
-
-.sosmed > p {
-  padding-bottom: 2.5rem;
-  font-weight: 500;
-
-  margin: 0 0.5rem;
-}
-
-.sosmed > img {
-  aspect-ratio: 51.9999/52;
-  width: 2.5rem;
-
-  margin: 0 0.5rem;
+  .gridcaker > div {
+    overflow: visible;
+    min-height: initial;
+  }
 }

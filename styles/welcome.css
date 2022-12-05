@@ -3,6 +3,11 @@
   padding: 3rem;
 }
 
+/* #welcome > * {
+  flex-basis: 50%;
+  border: saddlebrown solid;
+} */
+
 .rectangle {
   background-color: #f8cc8a;
 }
@@ -27,16 +32,4 @@
 
 .descwel > p {
   font-size: calc(0.1rem + 1vw);
-}
-
-@media screen and (max-width: 1080px) {
-  #welcome {
-    display: grid;
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
-    margin: 0 auto;
-    /* flex-direction: column;
-    align-items: center; */
-  }
 }
